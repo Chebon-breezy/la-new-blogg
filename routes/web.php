@@ -13,13 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get("/", [HomeController::class,'index'] );
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('/add_product', [HomeController::class, 'add_product']);
 
-Route::get('/home', function () {
-    return view('home');
-});
-
-route::get('test',[HomeController::class,'index']);
