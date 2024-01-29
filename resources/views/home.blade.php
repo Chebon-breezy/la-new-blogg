@@ -18,6 +18,14 @@
 <body>
 
 <center>
+    <br><br>
+<div class="container mt-3">
+    <div>
+        <a href="{{url('show_product')}}" class="btn btn-success">Show Products</a>
+    </div>
+</div>
+    <br><br>
+
 <div class="container mt-5">
     <h1>Add Product</h1>
     <form action="{{url('/add_product')}}" method="POST" enctype="multipart/form-data">

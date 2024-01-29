@@ -18,9 +18,13 @@ class HomeController extends Controller
         $data->description = $request->description;
 
         $image = $request->image; 
+
+        if ($image) {
         $imagename=time().'.'.$image->getClientOriginalExtension();
         $request->image->move('product',$imagename);
         $data->image = $imagename;
+        }
+        //check if image is added
 
 
         $data->save();
@@ -28,4 +32,9 @@ class HomeController extends Controller
         return redirect()->back();
 }
 
+public function show_product(Request $request) {
+
+  $data=Product::all();
+  return view('product', compact('data'));
+}
 }
