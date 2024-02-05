@@ -26,6 +26,7 @@
         <th>Title</th>
         <th>Description</th>
         <th>Image</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -34,6 +35,7 @@
           <td>{{ $item->title }}</td>
           <td>{{ $item->description }}</td>
           <td><img height="200" width="200" src="product/{{ $item->image }}" alt="Product Image" class="img-fluid"></td>
+          <td><a class="btn btn-danger" href="{{url('delete_product')}}">Delete</a></td>
         </tr>
       @endforeach
     </tbody>
