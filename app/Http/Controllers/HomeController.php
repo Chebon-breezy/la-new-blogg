@@ -37,4 +37,14 @@ public function show_product(Request $request) {
   $data=Product::all();
   return view('product', compact('data'));
 }
+
+public function delete_product($id){
+
+  $item = Product::find($id);
+
+  $item->delete();
+
+  return redirect()->back();
+
+}
 }
